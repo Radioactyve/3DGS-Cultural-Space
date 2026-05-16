@@ -55,8 +55,7 @@ def process_folder(folder_path):
         ["splat-transform", "splat_high.ply", "-F", "50%", "splat_mid.ply"],
         ["splat-transform", "splat_high.ply", "-F", "10%", "splat_low.ply"],
         ["splat-transform", "splat_high.ply", "-l", "0", "splat_mid.ply", "-l", "1", "splat_low.ply", "-l", "2", "lodSplat/lod-meta.json", "--filter-nan", "--filter-harmonics", "0"],
-        ["splat-transform", "splat_low.ply", "--filter-cluster", "--seed-pos", "0,1,0", "--voxel-params", "0.05,0.1", "--voxel-external-fill", "1.6", "--voxel-floor-fill", "1.6", "--voxel-carve", "1.6,0.2", "collission/terrain.voxel.json"],
-        ["splat-transform", "splat_low.ply", "--filter-cluster", "--seed-pos", "0,1,0", "--voxel-params", "0.05,0.1", "--voxel-external-fill", "1.6", "--voxel-floor-fill", "1.6", "--voxel-carve", "1.6,0.2", "-K", "collission/terrain.glb"]
+        ["splat-transform", "splat_low.ply", "--filter-cluster", "--seed-pos", "0,0,0", "--voxel-params", "0.25,0.2", "--voxel-floor-fill", "-K", "collission/terrain.voxel.json"]
     ]
 
     for i, cmd in enumerate(commands):
