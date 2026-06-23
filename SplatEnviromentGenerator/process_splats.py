@@ -52,8 +52,8 @@ def process_folder(folder_path):
 
     commands = [
         ["splat-transform", "splat_base.ply", "--filter-nan", "-M", "splat_high.ply"],
-        ["splat-transform", "splat_high.ply", "-F", "50%", "splat_mid.ply"],
-        ["splat-transform", "splat_high.ply", "-F", "10%", "splat_low.ply"],
+        ["splat-transform", "splat_high.ply", "-F", "75%", "splat_mid.ply"],
+        ["splat-transform", "splat_high.ply", "-F", "50%", "splat_low.ply"],
         ["splat-transform", "splat_high.ply", "-l", "0", "splat_mid.ply", "-l", "1", "splat_low.ply", "-l", "2", "lodSplat/lod-meta.json", "--filter-nan", "--filter-harmonics", "0"],
         ["splat-transform", "splat_low.ply", "--filter-cluster", "--seed-pos", "0,0,0", "--voxel-params", "0.25,0.2", "--voxel-floor-fill", "-K", "collission/terrain.voxel.json"]
     ]
